@@ -1,12 +1,12 @@
-"use client";
-
 import React from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { motion } from "framer-motion";
-import { MapPin, ArrowRight, Clock, Shield } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
-import { triggerLeadModal } from "@/lib/modal-utils";
+import { MapPin, ArrowRight, Clock, Shield } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Customer Cases | HDD Precision Projects",
+    description: "Real-world applications of Nanodrill technology. See how our compact HDD rigs solve utility challenges.",
+};
 
 const caseStudies = [
     {
@@ -25,18 +25,19 @@ const caseStudies = [
     }
 ];
 
-export default function CasesPage() {
+export default async function CasesPage({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { lang } = await params;
+
     return (
         <main className="min-h-screen bg-background">
-            <Navbar />
-
             <section className="pt-60 pb-32">
                 <div className="max-w-7xl mx-auto px-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="max-w-3xl mb-32"
-                    >
+                    <div className="max-w-3xl mb-32">
                         <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">Proven Performance</span>
                         <h1 className="text-6xl md:text-9xl font-black font-heading leading-none mb-12 uppercase">
                             FIELD <br />
@@ -45,18 +46,11 @@ export default function CasesPage() {
                         <p className="text-muted text-xl leading-relaxed">
                             Real-world results from infrastructure projects across Europe. Explore how our fleet solves complex logistical and geological challenges.
                         </p>
-                    </motion.div>
+                    </div>
 
                     <div className="grid grid-cols-1 gap-40">
                         {caseStudies.map((project, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
-                                className="group"
-                            >
+                            <div key={idx} className="group">
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                                     <div className="relative h-[600px] rounded-[4rem] overflow-hidden border border-white/10">
                                         <Image
@@ -105,20 +99,17 @@ export default function CasesPage() {
                                         </div>
 
                                         <button
-                                            onClick={() => triggerLeadModal("quote")}
                                             className="h-20 px-12 border border-white/10 rounded-3xl font-heading text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all flex items-center gap-6"
                                         >
                                             READ FULL PROJECT REPORT <ArrowRight size={20} />
                                         </button>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </main>
     );
 }

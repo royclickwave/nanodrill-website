@@ -1,0 +1,68 @@
+{
+    "nav": {
+        "models": "Models",
+        "tooling": "Tooling",
+        "cases": "Cases",
+        "about": "About"
+    },
+    "fleet": {
+        "badge": "Precision Engineering",
+        "title_main": "THE",
+        "title_sub": "FLEET",
+        "description": "Explore our lineup of high-performance rigs. Each designed to solve a specific infrastructural challenge."
+    },
+    "hero": {
+        "badge": "Dutch Engineering Excellence",
+        "title_main": "PRECISION",
+        "title_sub": "ENGINEERING",
+        "description": "The most powerful compact HDD rigs in the world. Engineered to go where others can't. Unmatched power in a surgical format.",
+        "cta_primary": "EXPLORE THE FLEET",
+        "cta_secondary": "WATCH DOCUMENTARY",
+        "stats_title": "NANODRILL 2026 // GEN-IV"
+    },
+    "common": {
+        "contact": "Contact Us",
+        "explore": "Explore Models",
+        "back": "Back"
+    },
+    "technical": {
+        "badge": "Technical Versatility",
+        "title_main": "BUILT FOR",
+        "title_sub": "DIVERSITY",
+        "description": "Our machines are engineered to tackle a wide variety of urban and industrial challenges with surgical precision.",
+        "check_1": "House Connections",
+        "check_2": "Fiber Deployment",
+        "check_3": "Electric Mini-excavators",
+        "check_4": "Compact Alleyways",
+        "util_1_title": "Residential",
+        "util_1_desc": "Perfect for yard-to-house fiber or water line installations.",
+        "util_2_title": "Fiber/Telecom",
+        "util_2_desc": "High-speed deployment for city-wide connectivity projects.",
+        "util_3_title": "Civil Engineering",
+        "util_3_desc": "Micro-tunneling under roads and existing infrastructure.",
+        "util_4_title": "Utility Upgrade",
+        "util_4_desc": "Power grid expansion in dense urban environments."
+    },
+    "cta": {
+        "badge": "Get Started",
+        "title_main": "READY TO",
+        "title_sub": "UPGRADE?",
+        "description": "Ready to transform your drilling infrastructure? Our engineers are standing by to guide you through the Nanodrill ecosystem.",
+        "primary_btn": "REQUEST QUOTE",
+        "secondary_btn": "TECHNICAL SUPPORT"
+    },
+    "about": {
+        "badge": "The Nanodrill Legacy",
+        "title_main": "DUTCH",
+        "title_sub": "ENGINEERING",
+        "title_end": "AT ITS PEAK",
+        "description": "Based in Barneveld, Kormee Machinery B.V. is redefining what is possible in the world of Horizontal Directional Drilling. Our Nanodrill series represents the perfect synergy of compact design and raw industrial power.",
+        "stats_num": "15+",
+        "stats_text": "Years of \n Engineering \n Mastery",
+        "feat_1": "Ultra-compact footprint for urban jobsites",
+        "feat_2": "High precision guidance systems",
+        "feat_3": "Engineered for durability & easy maintenance",
+        "feat_4": "Low environmental impact & noise levels",
+        "cta": "Read Full Story"
+    }
+}

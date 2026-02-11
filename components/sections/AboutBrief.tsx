@@ -3,16 +3,16 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
-const features = [
-    "Ultra-compact footprint for urban jobsites",
-    "High precision guidance systems",
-    "Engineered for durability & easy maintenance",
-    "Low environmental impact & noise levels",
-];
+export const AboutBrief = ({ dict }: { dict: any }) => {
+    const features = [
+        dict.about.feat_1,
+        dict.about.feat_2,
+        dict.about.feat_3,
+        dict.about.feat_4
+    ];
 
-export const AboutBrief = () => {
     return (
         <section className="py-40 bg-background relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
@@ -40,9 +40,9 @@ export const AboutBrief = () => {
                         transition={{ duration: 1, delay: 0.5 }}
                         className="absolute -bottom-12 -left-12 glass-card p-12 rounded-[3rem] border-white/10 hidden md:block"
                     >
-                        <p className="text-primary text-7xl font-black mb-2 leading-none">15+</p>
-                        <p className="text-white font-heading text-xs uppercase tracking-[0.3em] leading-tight">
-                            Years of <br /> Engineering <br /> Mastery
+                        <p className="text-primary text-7xl font-black mb-2 leading-none">{dict.about.stats_num}</p>
+                        <p className="text-white font-heading text-[10px] uppercase tracking-[0.3em] leading-tight whitespace-pre-line">
+                            {dict.about.stats_text}
                         </p>
                     </motion.div>
                 </div>
@@ -54,15 +54,14 @@ export const AboutBrief = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-primary font-heading uppercase tracking-[0.5em] text-xs mb-6 block">The Nanodrill Legacy</span>
-                        <h2 className="text-5xl md:text-7xl font-black leading-[0.9] mb-10">
-                            DUTCH <br />
-                            <span className="text-gradient">ENGINEERING</span> <br />
-                            AT ITS PEAK
+                        <span className="text-primary font-heading uppercase tracking-[0.5em] text-xs mb-6 block">{dict.about.badge}</span>
+                        <h2 className="text-5xl md:text-7xl font-black leading-[0.9] mb-10 uppercase">
+                            {dict.about.title_main} <br />
+                            <span className="text-gradient">{dict.about.title_sub}</span> <br />
+                            {dict.about.title_end}
                         </h2>
                         <p className="text-muted text-xl mb-12 leading-relaxed border-l border-white/10 pl-8">
-                            Based in Barneveld, Kormee Machinery B.V. is redefining what is possible in the world of Horizontal Directional Drilling.
-                            Our Nanodrill series represents the perfect synergy of compact design and raw industrial power.
+                            {dict.about.description}
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mb-12">
@@ -78,7 +77,7 @@ export const AboutBrief = () => {
                             <span className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all">
                                 <ArrowUpRight size={20} />
                             </span>
-                            Read Full Story
+                            {dict.about.cta}
                         </button>
                     </motion.div>
                 </div>

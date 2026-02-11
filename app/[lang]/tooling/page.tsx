@@ -1,12 +1,7 @@
-"use client";
-
 import React from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { motion } from "framer-motion";
-import { Drill, Shield, Zap, Settings, ArrowRight } from "lucide-react";
+import { Metadata } from "next";
+import { Drill } from "lucide-react";
 import Image from "next/image";
-import { triggerLeadModal } from "@/lib/modal-utils";
 
 const toolingCategories = [
     {
@@ -26,21 +21,27 @@ const toolingCategories = [
     }
 ];
 
-export default function ToolingPage() {
+export const metadata: Metadata = {
+    title: "HDD Tooling | Professional Drilling Equipment",
+    description: "High-quality HDD tooling solutions for Nanodrill and other drilling rigs. Drills, reamers, and guidance accessories.",
+};
+
+export default async function ToolingPage({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { lang } = await params;
+
     return (
         <main className="min-h-screen bg-background">
-            <Navbar />
-
             <section className="pt-60 pb-20 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
+                        <div>
                             <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">Project Accessories</span>
                             <h1 className="text-6xl md:text-8xl font-black font-heading leading-tight mb-8 uppercase">
                                 PRECISION <br />
@@ -49,26 +50,16 @@ export default function ToolingPage() {
                             <p className="text-muted text-xl leading-relaxed max-w-lg mb-12">
                                 Every component is engineered to complement the unique performance profile of Nanodrill machines. Built for durability, accuracy, and speed.
                             </p>
-                            <button
-                                onClick={() => triggerLeadModal("download")}
-                                className="h-16 px-12 bg-white text-black font-heading text-xs tracking-widest rounded-full hover:bg-primary hover:text-white transition-all flex items-center gap-4"
-                            >
-                                VIEW FULL CATALOG <ArrowRight size={16} />
-                            </button>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            className="relative h-[500px] w-full glass-card rounded-[4rem] border-white/5 overflow-hidden"
-                        >
+                        <div className="relative h-[500px] w-full glass-card rounded-[4rem] border-white/5 overflow-hidden">
                             <Image
                                 src="/images/tooling.png"
                                 alt="Nanodrill Tooling"
                                 fill
                                 className="object-contain p-12"
                             />
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -92,20 +83,11 @@ export default function ToolingPage() {
                                         </li>
                                     ))}
                                 </ul>
-
-                                <button
-                                    onClick={() => triggerLeadModal("quote")}
-                                    className="text-[10px] font-heading tracking-widest text-primary flex items-center gap-2 hover:gap-4 transition-all"
-                                >
-                                    ENQUIRE <ArrowRight size={14} />
-                                </button>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </main>
     );
 }

@@ -1,0 +1,68 @@
+{
+    "nav": {
+        "models": "Modelle",
+        "tooling": "Werkzeuge",
+        "cases": "Projekte",
+        "about": "Über uns"
+    },
+    "fleet": {
+        "badge": "Präzisions-Engineering",
+        "title_main": "DIE",
+        "title_sub": "FLOTTE",
+        "description": "Entdecken Sie unser Angebot an Hochleistungs-Bohranlagen. Jede davon wurde entwickelt, um eine spezifische infrastrukturelle Herausforderung zu lösen."
+    },
+    "hero": {
+        "badge": "Holländische Engineering-Exzellenz",
+        "title_main": "PRÄZISIONS",
+        "title_sub": "ENGINEERING",
+        "description": "Die leistungsstärksten kompakten HDD-Bohranlagen der Welt. Entwickelt, um dorthin zu gelangen, wo andere aufgeben. Unvergleichliche Kraft in chirurgischem Format.",
+        "cta_primary": "FLOTTE ENTDECKEN",
+        "cta_secondary": "DOKUMENTATION ANSEHEN",
+        "stats_title": "NANODRILL 2026 // GEN-IV"
+    },
+    "common": {
+        "contact": "Kontaktieren Sie uns",
+        "explore": "Modelle entdecken",
+        "back": "Zurück"
+    },
+    "technical": {
+        "badge": "Technische Vielseitigkeit",
+        "title_main": "GEBAUT FÜR",
+        "title_sub": "VIELFALT",
+        "description": "Unsere Maschinen sind so konzipiert, dass sie eine Vielzahl von städtischen und industriellen Herausforderungen mit chirurgischer Präzision bewältigen.",
+        "check_1": "Hausanschlüsse",
+        "check_2": "Glasfaserausbau",
+        "check_3": "Elektrische Minibagger",
+        "check_4": "Kompakte Gassen",
+        "util_1_title": "Wohngebiete",
+        "util_1_desc": "Perfekt für Glasfaser- oder Wasserleitungsinstallationen vom Garten zum Haus.",
+        "util_2_title": "Glasfaser/Telekom",
+        "util_2_desc": "Schneller Einsatz für stadtweite Konnektivitätsprojekte.",
+        "util_3_title": "Tiefbau",
+        "util_3_desc": "Mikrotunnelbau unter Straßen und bestehender Infrastruktur.",
+        "util_4_title": "Nutzwert-Upgrade",
+        "util_4_desc": "Ausbau des Stromnetzes in dichten städtischen Umgebungen."
+    },
+    "cta": {
+        "badge": "Loslegen",
+        "title_main": "BEREIT FÜR",
+        "title_sub": "UPGRADE?",
+        "description": "Bereit, Ihre Bohrinfrastruktur zu transformieren? Unsere Ingenieure stehen bereit, um Sie durch das Nanodrill-Ökosystem zu führen.",
+        "primary_btn": "ANGEBOT ANFORDERN",
+        "secondary_btn": "TECHNISCHER SUPPORT"
+    },
+    "about": {
+        "badge": "Das Nanodrill-Erbe",
+        "title_main": "DUTCH",
+        "title_sub": "ENGINEERING",
+        "title_end": "AUF HÖCHSTEM NIVEAU",
+        "description": "Mit Sitz in Barneveld definiert Kormee Machinery B.V. neu, was in der Welt der Horizontalspülbohrungen möglich is. Unsere Nanodrill-Serie repräsentiert die perfekte Synergie aus kompaktem Design und purer industrieller Kraft.",
+        "stats_num": "15+",
+        "stats_text": "Jahre \n Engineering \n Meisterschaft",
+        "feat_1": "Ultra-kompakter Footprint für städtische Baustellen",
+        "feat_2": "Hochpräzise Leit- und Steuerungssysteme",
+        "feat_3": "Konzipiert für Langlebigkeit und einfache Wartung",
+        "feat_4": "Geringe Umweltbelastung und niedrige Lärmpegel",
+        "cta": "Die ganze Geschichte lesen"
+    }
+}

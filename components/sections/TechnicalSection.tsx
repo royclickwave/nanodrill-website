@@ -4,34 +4,34 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, Home, Construction, Cable, Zap } from "lucide-react";
 
-const utilities = [
-    { icon: Home, title: "House Connections", desc: "Precision drilling for fiber, water, and gas in dense residential zones." },
-    { icon: Cable, title: "Fiber To The Home", desc: "Minimal displacement and ultra-accurate pathing for telecommunications." },
-    { icon: Construction, title: "Utility Infrastructure", desc: "Compact footprint for tight urban alleyways and infrastructure upgrades." },
-    { icon: Zap, title: "Power Cable Works", desc: "Reliable crossing of roads and obstructions for high-voltage deployment." }
-];
+export const TechnicalSection = ({ dict }: { dict: any }) => {
+    const utilities = [
+        { icon: Home, title: dict.technical.util_1_title, desc: dict.technical.util_1_desc },
+        { icon: Cable, title: dict.technical.util_2_title, desc: dict.technical.util_2_desc },
+        { icon: Construction, title: dict.technical.util_3_title, desc: dict.technical.util_3_desc },
+        { icon: Zap, title: dict.technical.util_4_title, desc: dict.technical.util_4_desc }
+    ];
 
-export const TechnicalSection = () => {
     return (
         <section className="py-40 bg-[#060608] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
                     <div>
-                        <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">Jobsite Versatility</span>
+                        <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">{dict.technical.badge}</span>
                         <h2 className="text-5xl md:text-7xl font-black font-heading leading-tight mb-12 uppercase">
-                            ENGINEERED FOR <br />
-                            <span className="text-gradient">COMPLEXITY</span>
+                            {dict.technical.title_main} <br />
+                            <span className="text-gradient">{dict.technical.title_sub}</span>
                         </h2>
                         <p className="text-muted text-xl leading-relaxed mb-16">
-                            Our Gen-IV machines are designed to operate where traditional HDD rigs fail. From the historic city centers of Europe to modern fiber deployments.
+                            {dict.technical.description}
                         </p>
 
                         <div className="flex flex-col gap-8">
                             {[
-                                "More accurate than rocket drilling",
-                                "Adjustable start angles (0-45 degrees)",
-                                "Low ground pressure for delicate landscapes",
-                                "Tier 5 Final / Zero Emission compliant"
+                                dict.technical.check_1,
+                                dict.technical.check_2,
+                                dict.technical.check_3,
+                                dict.technical.check_4
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-6 group">
                                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">

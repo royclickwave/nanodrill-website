@@ -1,52 +1,42 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { MessageSquare, ArrowRight, Zap } from "lucide-react";
+import { motion } from "framer-motion";
 import { triggerLeadModal } from "@/lib/modal-utils";
 
-export const CTASection = () => {
+export const CTASection = ({ dict }: { dict: any }) => {
     return (
-        <section className="py-60 relative overflow-hidden bg-background">
-            {/* Background Decor */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-primary/5 rounded-full blur-[160px] pointer-events-none" />
+        <section className="py-40 relative overflow-hidden bg-background">
+            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[200px]" />
+            </div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="glass-card rounded-[4rem] p-12 md:p-24 overflow-hidden relative border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
-                    {/* Internal background shapes */}
-                    <div className="absolute -top-24 -right-24 h-64 w-64 bg-primary/20 rounded-full blur-[80px]" />
-                    <div className="absolute -bottom-24 -left-24 h-64 w-64 bg-white/5 rounded-full blur-[80px]" />
+            <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-4xl mx-auto"
+                >
+                    <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">{dict.cta.badge}</span>
+                    <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-black font-heading leading-[0.85] mb-12 uppercase">
+                        {dict.cta.title_main} <br />
+                        <span className="text-gradient">{dict.cta.title_sub}</span>
+                    </h2>
+                    <p className="text-muted text-xl md:text-2xl leading-relaxed mb-16 max-w-2xl mx-auto">
+                        {dict.cta.description}
+                    </p>
 
-                    <div className="relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
-                        <div className="lg:w-2/3 text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8">
-                                <Zap size={14} className="text-primary" />
-                                <span className="text-[10px] font-heading tracking-[0.2em] uppercase text-primary">Get Started Today</span>
-                            </div>
-                            <h2 className="text-5xl md:text-[6rem] font-black font-heading leading-none mb-8">
-                                PUSH THE <br />
-                                <span className="text-gradient">BOUNDARIES</span>
-                            </h2>
-                            <p className="text-muted text-xl leading-relaxed max-w-xl">
-                                Ready to transform your drilling infrastructure? Our engineers are standing by to guide you through the Nanodrill ecosystem.
-                            </p>
-                        </div>
-
-                        <div className="lg:w-1/3 flex flex-col gap-6 w-full">
-                            <Button size="lg" className="h-24 w-full text-lg tracking-[0.2em]" onClick={() => triggerLeadModal("quote")}>
-                                REQUEST QUOTE <ArrowRight className="ml-4" />
-                            </Button>
-                            <button
-                                onClick={() => triggerLeadModal("quote")}
-                                className="h-20 w-full rounded-3xl border border-white/10 hover:bg-white hover:text-black transition-all flex items-center justify-center gap-4 font-heading text-xs uppercase tracking-widest"
-                            >
-                                <MessageSquare size={20} /> TECHNICAL SUPPORT
-                            </button>
-                        </div>
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                        <Button size="lg" className="h-20 px-12 text-sm tracking-widest" onClick={() => triggerLeadModal("quote")}>
+                            {dict.cta.primary_btn}
+                        </Button>
+                        <Button variant="outline" size="lg" className="h-20 px-12 text-sm tracking-widest border-white/10" onClick={() => triggerLeadModal("quote")}>
+                            {dict.cta.secondary_btn}
+                        </Button>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

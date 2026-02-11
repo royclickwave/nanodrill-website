@@ -1,0 +1,68 @@
+{
+    "nav": {
+        "models": "Modellen",
+        "tooling": "Gereedschap",
+        "cases": "Projecten",
+        "about": "Over ons"
+    },
+    "fleet": {
+        "badge": "Precisie Engineering",
+        "title_main": "ONZE",
+        "title_sub": "VLOOT",
+        "description": "Ontdek ons aanbod van hoogwaardige boorinstallaties. Elk ontworpen om een specifieke infrastructurele uitdaging op te lossen."
+    },
+    "hero": {
+        "badge": "Nederlands Engineering Vakmanschap",
+        "title_main": "PRECISIE",
+        "title_sub": "ENGINEERING",
+        "description": "De krachtigste compacte HDD machines ter wereld. Ontworpen om te gaan waar anderen dat niet kunnen. Ongekende kracht op zakformaat.",
+        "cta_primary": "ONTDEK VLOOT",
+        "cta_secondary": "BEKIJK DOCUMENTAIRE",
+        "stats_title": "NANODRILL 2026 // GEN-IV"
+    },
+    "common": {
+        "contact": "Contact",
+        "explore": "Ontdek Modellen",
+        "back": "Terug"
+    },
+    "technical": {
+        "badge": "Technische Veelzijdigheid",
+        "title_main": "GEBOUWD VOOR",
+        "title_sub": "DIVERSITEIT",
+        "description": "Onze machines zijn ontworpen om een grote verscheidenheid aan stedelijke en industriële uitdagingen met chirurgische precisie aan te pakken.",
+        "check_1": "Huisaansluitingen",
+        "check_2": "Glasvezelaanleg",
+        "check_3": "Elektrische Mini-gravers",
+        "check_4": "Smalle Stegen",
+        "util_1_title": "Residentieel",
+        "util_1_desc": "Perfect voor glasvezel of waterleiding installaties van tuin tot huis.",
+        "util_2_title": "Glasvezel/Telecom",
+        "util_2_desc": "Snel inzetbaar voor stadswijde connectiviteitsprojecten.",
+        "util_3_title": "Civiele Techniek",
+        "util_3_desc": "Micro-tunneling onder wegen en bestaande infrastructuur.",
+        "util_4_title": "Nuts-upgrade",
+        "util_4_desc": "Uitbreiding van het elektriciteitsnet in dichte stedelijke omgevingen."
+    },
+    "cta": {
+        "badge": "Aan de slag",
+        "title_main": "KLAAR VOOR",
+        "title_sub": "UPGRADE?",
+        "description": "Klaar om uw boorinfrastructuur te transformeren? Onze engineers staan klaar om u te begeleiden door het Nanodrill-ecosysteem.",
+        "primary_btn": "OFFERTE AANVRAAG",
+        "secondary_btn": "TECHNISCHE SUPPORT"
+    },
+    "about": {
+        "badge": "De Nanodrill Erfenis",
+        "title_main": "DUTCH",
+        "title_sub": "ENGINEERING",
+        "title_end": "OP ZIJN TOP",
+        "description": "Gevestigd in Barneveld herdefinieert Kormee Machinery B.V. wat mogelijk is in de wereld van horizontaal gestuurd boren. Onze Nanodrill-serie vertegenwoordigt de perfecte synergie tussen compact ontwerp en pure industriële kracht.",
+        "stats_num": "15+",
+        "stats_text": "Jaren van \n Engineering \n Meesterschap",
+        "feat_1": "Ultra-compacte voetafdruk voor stedelijke werkplekken",
+        "feat_2": "Hoge precisie geleidingssystemen",
+        "feat_3": "Ontworpen voor duurzaamheid & eenvoudig onderhoud",
+        "feat_4": "Lage milieu-impact & geluidsniveaus",
+        "cta": "Lees het volledige verhaal"
+    }
+}
