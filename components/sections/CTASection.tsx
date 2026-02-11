@@ -7,9 +7,10 @@ import { triggerLeadModal } from "@/lib/modal-utils";
 
 export const CTASection = ({ dict }: { dict: any }) => {
     return (
-        <section className="py-40 relative overflow-hidden bg-background">
-            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[200px]" />
+        <section className="py-60 relative overflow-hidden bg-[#030305]">
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(214,0,28,0.1)_0%,transparent_70%)]" />
+                <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
@@ -19,22 +20,27 @@ export const CTASection = ({ dict }: { dict: any }) => {
                     viewport={{ once: true }}
                     className="max-w-4xl mx-auto"
                 >
-                    <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">{dict.cta.badge}</span>
-                    <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-black font-heading leading-[0.85] mb-12 uppercase">
+                    <div className="flex justify-center items-center gap-4 mb-10">
+                        <div className="h-px w-10 bg-primary/50" />
+                        <span className="text-primary font-heading tracking-[0.6em] text-[10px] uppercase">{dict.cta.badge}</span>
+                        <div className="h-px w-10 bg-primary/50" />
+                    </div>
+                    <h2 className="text-6xl md:text-8xl lg:text-[11rem] font-black font-heading leading-[0.8] mb-12 uppercase tracking-tighter">
                         {dict.cta.title_main} <br />
-                        <span className="text-gradient">{dict.cta.title_sub}</span>
+                        <span className="text-gradient drop-shadow-2xl italic">{dict.cta.title_sub}</span>
                     </h2>
                     <p className="text-muted text-xl md:text-2xl leading-relaxed mb-16 max-w-2xl mx-auto">
                         {dict.cta.description}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                        <Button size="lg" className="h-20 px-12 text-sm tracking-widest" onClick={() => triggerLeadModal("quote")}>
-                            {dict.cta.primary_btn}
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center mt-20">
+                        <Button size="lg" className="h-24 px-16 text-[10px] tracking-[0.4em] font-heading uppercase group overflow-hidden relative" onClick={() => triggerLeadModal("quote")}>
+                            <span className="relative z-10">{dict.cta.primary_btn}</span>
+                            <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                         </Button>
-                        <Button variant="outline" size="lg" className="h-20 px-12 text-sm tracking-widest border-white/10" onClick={() => triggerLeadModal("quote")}>
+                        <button className="h-24 px-16 border border-white/10 rounded-full text-[10px] tracking-[0.4em] font-heading uppercase hover:bg-white hover:text-black transition-all duration-500" onClick={() => triggerLeadModal("quote")}>
                             {dict.cta.secondary_btn}
-                        </Button>
+                        </button>
                     </div>
                 </motion.div>
             </div>

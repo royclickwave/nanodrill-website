@@ -6,6 +6,7 @@ import { LeadFlow } from "@/components/ui/LeadFlow";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
+import SmoothScrollProvider from "@/components/providers/SmoothScroll";
 
 const nasalization = localFont({
     src: "../../public/fonts/nasalization.otf",
@@ -40,11 +41,13 @@ export default async function RootLayout({
 
     return (
         <html lang={lang} className="scroll-smooth">
-            <body className={`${poppins.variable} ${nasalization.variable} antialiased text-white bg-background`}>
-                <LeadFlow />
-                <Navbar lang={lang} dict={dict} />
-                {children}
-                <Footer lang={lang} dict={dict} />
+            <body className={`${poppins.variable} ${nasalization.variable} antialiased text-white bg-background overflow-x-hidden`}>
+                <SmoothScrollProvider>
+                    <LeadFlow />
+                    <Navbar lang={lang} dict={dict} />
+                    {children}
+                    <Footer lang={lang} dict={dict} />
+                </SmoothScrollProvider>
             </body>
         </html>
     );

@@ -76,11 +76,11 @@ export const Navbar = ({ lang, dict }: { lang: string; dict: any }) => {
 
             <nav className={cn("fixed left-0 right-0 z-50 transition-all duration-500 px-6", isScrolled ? "top-4" : "top-10")}>
                 <div className={cn(
-                    "max-w-7xl mx-auto flex items-center justify-between px-8 py-4 transition-all duration-500 rounded-[2rem]",
-                    isScrolled ? "bg-background/80 backdrop-blur-2xl border border-white/10 shadow-2xl" : "bg-transparent"
+                    "max-w-7xl mx-auto flex items-center justify-between px-8 py-5 transition-all duration-700 rounded-full",
+                    isScrolled ? "bg-background/40 backdrop-blur-3xl border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)]" : "bg-transparent"
                 )}>
-                    <Link href={`/${lang}`} className="relative h-8 w-32 group">
-                        <Image src="/images/logo.svg" alt="Nanodrill Logo" fill className="object-contain transition-transform duration-500 group-hover:scale-105" priority />
+                    <Link href={`/${lang}`} className="relative h-7 w-36 group">
+                        <Image src="/images/logo.svg" alt="Nanodrill Logo" fill className="object-contain transition-all duration-500 group-hover:brightness-125" priority />
                     </Link>
 
                     <div className="hidden lg:flex items-center gap-10">
@@ -92,10 +92,14 @@ export const Navbar = ({ lang, dict }: { lang: string; dict: any }) => {
                             <AnimatePresence>
                                 {activeMegaMenu && (
                                     <motion.div
-                                        initial={{ opacity: 0, y: 10, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 10, scale: 0.98 }}
-                                        className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-card/95 backdrop-blur-3xl border border-white/10 rounded-[3rem] p-8 shadow-[0_40px_100px_rgba(0,0,0,0.8)] overflow-hidden"
+                                        initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, y: 15, scale: 0.95 }}
+                                        transition={{ type: "spring", damping: 20, stiffness: 100 }}
+                                        className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[900px] bg-card/60 backdrop-blur-[40px] border border-white/5 rounded-[4rem] p-10 shadow-[0_50px_100px_rgba(0,0,0,0.9)] overflow-hidden"
                                     >
-                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+                                        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse" />
+                                        <div className="absolute inset-0 bg-primary/5 opacity-50 pointer-events-none" />
                                         <div className="grid grid-cols-4 gap-6">
                                             {models.map((model) => (
                                                 <Link key={model.id} href={`/${lang}/model/nanodrill-${model.id}`} className="group/item flex flex-col gap-4 p-4 rounded-3xl hover:bg-white/5 transition-all">
@@ -137,12 +141,12 @@ export const Navbar = ({ lang, dict }: { lang: string; dict: any }) => {
 
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] bg-background flex flex-col p-10">
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl flex flex-col p-10">
                         <div className="flex justify-between items-center mb-20">
-                            <Image src="/images/logo.svg" alt="Logo" width={120} height={30} />
-                            <button onClick={() => setIsMobileMenuOpen(false)} className="text-white">
-                                <X size={32} />
-                            </button>
+                            <Image src="/images/logo.svg" alt="Logo" width={140} height={35} />
+                            <div className="h-14 w-14 rounded-full border border-white/10 flex items-center justify-center" onClick={() => setIsMobileMenuOpen(false)}>
+                                <X size={24} className="text-white" />
+                            </div>
                         </div>
 
                         <div className="flex flex-col gap-8">

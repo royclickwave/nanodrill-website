@@ -49,26 +49,29 @@ export const AboutBrief = ({ dict }: { dict: any }) => {
 
                 <div className="flex flex-col gap-10 order-1 lg:order-2">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1 }}
                     >
-                        <span className="text-primary font-heading uppercase tracking-[0.5em] text-xs mb-6 block">{dict.about.badge}</span>
-                        <h2 className="text-5xl md:text-7xl font-black leading-[0.9] mb-10 uppercase">
+                        <div className="flex items-center gap-4 mb-8">
+                            <span className="h-px w-8 bg-primary" />
+                            <span className="text-primary font-heading uppercase tracking-[0.5em] text-[10px] block">{dict.about.badge}</span>
+                        </div>
+                        <h2 className="text-7xl md:text-8xl font-black leading-[0.8] mb-12 uppercase font-heading tracking-tighter">
                             {dict.about.title_main} <br />
-                            <span className="text-gradient">{dict.about.title_sub}</span> <br />
-                            {dict.about.title_end}
+                            <span className="text-gradient drop-shadow-xl">{dict.about.title_sub}</span> <br />
+                            <span className="text-4xl md:text-6xl text-white/40 block mt-2">{dict.about.title_end}</span>
                         </h2>
-                        <p className="text-muted text-xl mb-12 leading-relaxed border-l border-white/10 pl-8">
+                        <p className="text-muted text-xl mb-12 leading-relaxed border-l-2 border-primary/20 pl-8 bg-white/5 py-6 pr-6 rounded-r-2xl border-y border-white/5 backdrop-blur-sm">
                             {dict.about.description}
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mb-12">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-16">
                             {features.map((feature, idx) => (
-                                <div key={idx} className="flex items-center gap-4 group">
-                                    <div className="h-2 w-2 rounded-full bg-primary group-hover:scale-150 transition-transform" />
-                                    <span className="text-white/60 group-hover:text-white transition-colors text-sm uppercase tracking-wider font-medium">{feature}</span>
+                                <div key={idx} className="flex items-center gap-6 group">
+                                    <div className="h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_rgba(214,0,28,0.8)] group-hover:scale-[2.5] transition-all duration-500" />
+                                    <span className="text-white/40 group-hover:text-white transition-all text-[10px] uppercase font-heading tracking-[0.2em]">{feature}</span>
                                 </div>
                             ))}
                         </div>
