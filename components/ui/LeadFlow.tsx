@@ -48,7 +48,7 @@ export const LeadFlow = () => {
                     initial={{ scale: 0.9, y: 20, opacity: 0 }}
                     animate={{ scale: 1, y: 0, opacity: 1 }}
                     exit={{ scale: 0.9, y: 20, opacity: 0 }}
-                    className="bg-card border border-white/10 rounded-[3rem] p-8 md:p-12 w-full max-w-2xl shadow-[0_50px_100px_rgba(0,0,0,0.8)] relative overflow-hidden"
+                    className="bg-card border border-white/10 rounded-2xl sm:rounded-3xl lg:rounded-[3rem] p-6 sm:p-8 md:p-12 w-full max-w-2xl shadow-[0_50px_100px_rgba(0,0,0,0.8)] relative overflow-hidden max-h-[90vh] overflow-y-auto"
                     onClick={e => e.stopPropagation()}
                 >
                     <button

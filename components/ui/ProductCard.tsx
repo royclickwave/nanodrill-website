@@ -47,7 +47,7 @@ export const ProductCard = ({ id, name, image, lang = "en", className }: Product
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className={cn(
-                    "group relative p-8 rounded-[3rem] transition-all duration-300 ease-out glass-card overflow-hidden",
+                    "group relative p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl lg:rounded-[3rem] transition-all duration-300 ease-out glass-card overflow-hidden",
                     className
                 )}
             >
@@ -55,7 +55,7 @@ export const ProductCard = ({ id, name, image, lang = "en", className }: Product
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-[radial-gradient(600px_circle_at_var(--mouse-x)_var(--mouse-y),rgba(214,0,28,0.1),transparent_40%)]" />
 
                 <div className="relative z-10">
-                    <div className="relative h-64 w-full mb-10 overflow-hidden rounded-2xl">
+                    <div className="relative h-48 sm:h-56 lg:h-64 w-full mb-6 lg:mb-10 overflow-hidden rounded-xl lg:rounded-2xl">
                         <div className="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors duration-500" />
                         <Image
                             src={image}
@@ -68,7 +68,7 @@ export const ProductCard = ({ id, name, image, lang = "en", className }: Product
                     <div className="flex justify-between items-end">
                         <div>
                             <span className="text-primary text-xs font-heading mb-2 block tracking-widest">SERIES {id}</span>
-                            <h3 className="text-3xl font-heading mb-0">{name}</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-3xl font-heading mb-0">{name}</h3>
                         </div>
                         <div className="h-12 w-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-500 group-hover:rotate-45">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -79,7 +79,7 @@ export const ProductCard = ({ id, name, image, lang = "en", className }: Product
                 </div>
 
                 {/* Background Decor */}
-                <div className="absolute -top-10 -right-10 text-[10rem] font-black text-white/5 pointer-events-none select-none group-hover:text-primary/10 transition-colors">
+                <div className="absolute -top-10 -right-10 text-[6rem] lg:text-[10rem] font-black text-white/5 pointer-events-none select-none group-hover:text-primary/10 transition-colors">
                     {id.slice(-2)}
                 </div>
             </motion.div>

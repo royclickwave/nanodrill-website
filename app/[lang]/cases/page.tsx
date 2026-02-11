@@ -35,24 +35,24 @@ export default async function CasesPage({
 
     return (
         <main className="min-h-screen bg-background">
-            <section className="pt-60 pb-32">
+            <section className="pt-32 md:pt-44 lg:pt-60 pb-16 md:pb-24 lg:pb-32">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="max-w-3xl mb-32">
-                        <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">Proven Performance</span>
-                        <h1 className="text-6xl md:text-9xl font-black font-heading leading-none mb-12 uppercase">
+                    <div className="max-w-3xl mb-16 md:mb-24 lg:mb-32">
+                        <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-6 md:mb-8 block">Proven Performance</span>
+                        <h1 className="text-4xl sm:text-6xl md:text-9xl font-black font-heading leading-none mb-8 md:mb-12 uppercase">
                             FIELD <br />
                             <span className="text-gradient">OPERATIONS</span>
                         </h1>
-                        <p className="text-muted text-xl leading-relaxed">
+                        <p className="text-muted text-base lg:text-xl leading-relaxed">
                             Real-world results from infrastructure projects across Europe. Explore how our fleet solves complex logistical and geological challenges.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-40">
+                    <div className="grid grid-cols-1 gap-16 md:gap-24 lg:gap-40">
                         {caseStudies.map((project, idx) => (
                             <div key={idx} className="group">
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                                    <div className="relative h-[600px] rounded-[4rem] overflow-hidden border border-white/10">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+                                    <div className="relative h-[300px] md:h-[400px] lg:h-[600px] rounded-2xl md:rounded-[3rem] lg:rounded-[4rem] overflow-hidden border border-white/10">
                                         <Image
                                             src={project.image}
                                             alt={project.title}
@@ -60,7 +60,7 @@ export default async function CasesPage({
                                             className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                                        <div className="absolute bottom-12 left-12 flex gap-4">
+                                        <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12 flex gap-3 md:gap-4">
                                             {project.tags.map(tag => (
                                                 <span key={tag} className="px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] font-heading tracking-widest text-white uppercase">
                                                     {tag}
@@ -74,14 +74,14 @@ export default async function CasesPage({
                                             <MapPin size={16} />
                                             <span className="text-xs font-heading tracking-widest uppercase">{project.location}</span>
                                         </div>
-                                        <h2 className="text-4xl md:text-5xl font-black font-heading leading-tight mb-8 uppercase">
+                                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-black font-heading leading-tight mb-6 md:mb-8 uppercase">
                                             {project.title}
                                         </h2>
-                                        <p className="text-muted text-lg leading-relaxed mb-12">
+                                        <p className="text-muted text-base lg:text-lg leading-relaxed mb-8 md:mb-12">
                                             {project.desc}
                                         </p>
 
-                                        <div className="grid grid-cols-2 gap-8 mb-12">
+                                        <div className="grid grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12">
                                             <div className="flex items-center gap-4">
                                                 <Clock className="text-primary/40" size={24} />
                                                 <div>
@@ -99,7 +99,7 @@ export default async function CasesPage({
                                         </div>
 
                                         <button
-                                            className="h-20 px-12 border border-white/10 rounded-3xl font-heading text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all flex items-center gap-6"
+                                            className="h-14 sm:h-16 lg:h-20 px-6 sm:px-8 lg:px-12 border border-white/10 rounded-2xl lg:rounded-3xl font-heading text-[10px] sm:text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all flex items-center gap-4 md:gap-6"
                                         >
                                             READ FULL PROJECT REPORT <ArrowRight size={20} />
                                         </button>
