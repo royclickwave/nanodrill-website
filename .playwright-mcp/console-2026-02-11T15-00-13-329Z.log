@@ -1,0 +1,44 @@
+[     161ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-3004-PNG-2.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[     201ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-3004-PNG-2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[  163031ms] [ERROR] ./nanodrill/components/sections/Hero.tsx:60:31
+Parsing ecmascript source code failed
+  58 |                             <span className="text-outline">DRILLING</span> <br />
+  59 |                             <span className="text-gradient">ACCESS</span>
+> 60 |                         </h1 >
+     |                               ^
+> 61 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^
+  62 |
+  63 |                     <motion.p
+  64 |                         initial={{ opacity: 0 }}
+
+Expected '</', got 'jsx text'
+
+Import trace:
+  Server Component:
+    ./nanodrill/components/sections/Hero.tsx
+    ./nanodrill/app/page.tsx @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:3127
+[  179715ms] [ERROR] ./nanodrill/components/sections/Hero.tsx:60:31
+Parsing ecmascript source code failed
+  58 |                             <span className="text-outline">DRILLING</span> <br />
+  59 |                             <span className="text-gradient">ACCESS</span>
+> 60 |                         </h1 >
+     |                               ^
+> 61 |                     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^
+  62 |
+  63 |                     <motion.p
+  64 |                         initial={{ opacity: 0 }}
+
+Expected '</', got 'jsx text'
+
+Import trace:
+  Server Component:
+    ./nanodrill/components/sections/Hero.tsx
+    ./nanodrill/app/page.tsx @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:3127
+[  191970ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-4-2.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[  191973ms] [WARNING] %c%s%c [33m[1m⚠[22m[39m metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[  192287ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/07/Kormee-Nanodrill-4030-PNG.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[  192339ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-5060-TR-2.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[  213564ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-4-2.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height. @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297

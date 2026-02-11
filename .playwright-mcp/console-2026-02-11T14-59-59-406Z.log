@@ -1,0 +1,34 @@
+[    1816ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[    1910ms] [WARNING] %c%s%c [33m[1m⚠[22m[39m metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[    2002ms] Error: Invalid src prop (https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-4-2-1536x1024.png) on `next/image`, hostname "nanodrill.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+    at defaultLoader (http://localhost:3000/_next/static/chunks/61004_next_c6a5c4c6._.js:3933:49)
+    at http://localhost:3000/_next/static/chunks/61004_next_c6a5c4c6._.js:1378:39
+    at Array.map (<anonymous>)
+    at generateImgAttrs (http://localhost:3000/_next/static/chunks/61004_next_c6a5c4c6._.js:1378:24)
+    at getImgProps (http://localhost:3000/_next/static/chunks/61004_next_c6a5c4c6._.js:1791:27)
+    at http://localhost:3000/_next/static/chunks/61004_next_c6a5c4c6._.js:4266:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_react-dom_52c697bc._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/61004_next_dist_compiled_6383703a._.js:2647:64)
+[    5190ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1195930e._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[    5190ms] [WARNING] The resource http://localhost:3000/_next/static/media/a218039a3287bcfd-s.p.4a23d71b.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[    5191ms] [WARNING] The resource http://localhost:3000/_next/static/media/8e6fa89aa22d24ec-s.p.3aec397d.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[    5191ms] [WARNING] The resource http://localhost:3000/_next/static/media/c875c6f5d3e977ac-s.p.80fc2c9e.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[    5191ms] [WARNING] The resource http://localhost:3000/_next/static/media/e2334d715941921e-s.p.d82a9aff.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[    5191ms] [WARNING] The resource http://localhost:3000/_next/static/media/0acc7fdf55eb3220-s.p.532ccaa1.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[    5191ms] [WARNING] The resource http://localhost:3000/_next/static/media/47fe1b7cd6e6ed85-s.p.855a563b.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[   10694ms] [WARNING] %c%s%c [33m[1m⚠[22m[39m metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[   10836ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Logo-Kormee-Machinery-LA-SVG-1.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[   11360ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-3004-PNG-2.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
+[   11544ms] [WARNING] Image with src "https://nanodrill.com/wp-content/uploads/2025/03/Kormee-Nanodrill-3004-PNG-2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/61004_next_dist_de7476ca._.js:2297
