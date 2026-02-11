@@ -18,7 +18,7 @@ export const Button = ({
     ...props
 }: ButtonProps) => {
     const variants = {
-        primary: "bg-primary text-white hover:bg-primary/90 shadow-[0_0_20px_rgba(214,0,28,0.3)]",
+        primary: "bg-primary text-white hover:bg-primary shadow-[0_10px_30px_rgba(214,0,28,0.2)]",
         secondary: "bg-white text-black hover:bg-white/90",
         outline: "border border-white/20 bg-transparent hover:bg-white/10 text-white",
         ghost: "bg-transparent hover:bg-white/5 text-white",
@@ -45,14 +45,6 @@ export const Button = ({
             <span className="relative z-10 flex items-center gap-2">
                 {children}
             </span>
-            {variant === "primary" && (
-                <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "100%" }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                />
-            )}
         </motion.button>
     );
 };

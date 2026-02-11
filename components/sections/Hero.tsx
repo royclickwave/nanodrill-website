@@ -60,9 +60,9 @@ export const Hero = ({ dict }: { dict: any }) => {
                     </motion.div>
 
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="flex flex-col sm:flex-row gap-8 mt-4">
-                        <Button size="lg" className="h-20 px-12 text-[10px] tracking-[0.3em] font-heading overflow-hidden group/btn relative" onClick={() => triggerLeadModal("quote")}>
+                        <Button size="lg" className="h-20 px-12 text-[10px] tracking-[0.3em] font-heading overflow-hidden group/btn relative bg-white text-black border-none hover:text-white" onClick={() => triggerLeadModal("quote")}>
                             <span className="relative z-10 flex items-center gap-3">{dict.hero.cta_primary} <ArrowRight size={16} /></span>
-                            <div className="absolute inset-0 bg-white translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500" />
+                            <div className="absolute inset-0 bg-primary translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-soft" />
                         </Button>
                         <button className="flex items-center gap-6 group text-white hover:text-primary transition-all">
                             <div className="h-16 w-16 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary/10 group-hover:border-primary/50 transition-all shadow-[0_0_20px_rgba(214,0,28,0)] group-hover:shadow-[0_0_40px_rgba(214,0,28,0.2)] relative overflow-hidden">
