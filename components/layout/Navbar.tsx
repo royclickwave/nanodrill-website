@@ -30,6 +30,16 @@ export const Navbar = ({ lang, dict }: { lang: string; dict: any }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => { document.body.style.overflow = ""; };
+    }, [isMobileMenuOpen]);
+
     const navItems = [
         { name: dict.nav.tooling, href: `/${lang}/tooling` },
         { name: dict.nav.cases, href: `/${lang}/cases` },
@@ -74,7 +84,7 @@ export const Navbar = ({ lang, dict }: { lang: string; dict: any }) => {
                 </div>
             </div>
 
-            <nav className={cn("fixed left-0 right-0 z-50 transition-all duration-500 px-4 lg:px-6", isScrolled ? "top-4" : "top-10")}>
+            <nav className={cn("fixed left-0 right-0 z-50 transition-all duration-500 px-4 lg:px-6", isScrolled ? "top-2 lg:top-4" : "top-8 lg:top-10")}>
                 <div className={cn(
                     "max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 lg:py-5 transition-all duration-700 rounded-full",
                     isScrolled ? "bg-background/40 backdrop-blur-3xl border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)]" : "bg-transparent"
@@ -133,7 +143,7 @@ export const Navbar = ({ lang, dict }: { lang: string; dict: any }) => {
                         </Link>
                     </div>
 
-                    <button className="lg:hidden text-white p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                    <button className="lg:hidden text-white p-3 -mr-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
@@ -166,13 +176,29 @@ export const Navbar = ({ lang, dict }: { lang: string; dict: any }) => {
                             ))}
                         </div>
 
-                        <div className="mt-auto pt-10 flex flex-col gap-3 text-[10px] font-heading tracking-[0.2em] text-white/40 uppercase">
-                            <a href="tel:+31342745100" className="flex items-center gap-2 hover:text-primary transition-colors">
-                                <Phone size={10} className="text-primary" /> +31 (0) 342 745 100
-                            </a>
-                            <a href="mailto:info@nanodrill.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-                                <Mail size={10} className="text-primary" /> info@nanodrill.com
-                            </a>
+                        <div className="mt-auto pt-10 flex flex-col gap-6">
+                            <div className="flex items-center gap-4 text-[10px] font-heading tracking-[0.2em] text-white/40 uppercase">
+                                {["en", "nl", "de"].map((l) => (
+                                    <React.Fragment key={l}>
+                                        <Link
+                                            href={switchLocale(l)}
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            className={cn("hover:text-white transition-colors text-sm py-1 px-2", lang === l && "text-primary")}
+                                        >
+                                            {l.toUpperCase()}
+                                        </Link>
+                                        {l !== "de" && <span className="text-white/10">/</span>}
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                            <div className="flex flex-col gap-3 text-[10px] font-heading tracking-[0.2em] text-white/40 uppercase">
+                                <a href="tel:+31342745100" className="flex items-center gap-2 hover:text-primary transition-colors">
+                                    <Phone size={10} className="text-primary" /> +31 (0) 342 745 100
+                                </a>
+                                <a href="mailto:info@nanodrill.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                                    <Mail size={10} className="text-primary" /> info@nanodrill.com
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                 )}

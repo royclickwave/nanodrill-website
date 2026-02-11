@@ -79,17 +79,17 @@ export const LeadFlow = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <label className="text-[10px] font-heading text-white/40 uppercase tracking-widest pl-2">Full Name</label>
-                                            <input required type="text" className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-6 text-white focus:border-primary/50 outline-none transition-all" placeholder="John Doe" />
+                                            <input required type="text" className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-6 text-base text-white focus:border-primary/50 outline-none transition-all" placeholder="John Doe" />
                                         </div>
                                         <div className="space-y-2">
                                             <label className="text-[10px] font-heading text-white/40 uppercase tracking-widest pl-2">Email Address</label>
-                                            <input required type="email" className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-6 text-white focus:border-primary/50 outline-none transition-all" placeholder="john@company.com" />
+                                            <input required type="email" className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-6 text-base text-white focus:border-primary/50 outline-none transition-all" placeholder="john@company.com" />
                                         </div>
                                     </div>
 
                                     <div className="space-y-2">
                                         <label className="text-[10px] font-heading text-white/40 uppercase tracking-widest pl-2">Model of Interest</label>
-                                        <select className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-6 text-white focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer">
+                                        <select className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-6 text-base text-white focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer">
                                             <option className="bg-background">Nanodrill 3004</option>
                                             <option className="bg-background">Nanodrill 4030</option>
                                             <option className="bg-background">Nanodrill 5060</option>
@@ -100,7 +100,7 @@ export const LeadFlow = () => {
                                     {activeModal === "quote" && (
                                         <div className="space-y-2">
                                             <label className="text-[10px] font-heading text-white/40 uppercase tracking-widest pl-2">Project Details</label>
-                                            <textarea className="w-full h-32 bg-white/5 border border-white/5 rounded-2xl p-6 text-white focus:border-primary/50 outline-none transition-all resize-none" placeholder="Tell us about your upcoming project..."></textarea>
+                                            <textarea className="w-full h-32 bg-white/5 border border-white/5 rounded-2xl p-6 text-base text-white focus:border-primary/50 outline-none transition-all resize-none" placeholder="Tell us about your upcoming project..."></textarea>
                                         </div>
                                     )}
 
