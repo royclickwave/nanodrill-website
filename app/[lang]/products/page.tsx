@@ -46,17 +46,17 @@ export default async function ProductsPage({
 
     return (
         <main className="min-h-screen bg-background">
-            <section className="pt-60 pb-20 relative overflow-hidden">
+            <section className="pt-32 md:pt-44 lg:pt-60 pb-12 md:pb-20 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-[100vh] bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="max-w-3xl mb-32">
-                        <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">{dict.nav.models}</span>
-                        <h1 className="text-6xl md:text-9xl font-black font-heading leading-tight mb-8 uppercase">
+                    <div className="max-w-3xl mb-12 md:mb-20 lg:mb-32">
+                        <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-6 md:mb-8 block">{dict.nav.models}</span>
+                        <h1 className="text-4xl sm:text-6xl md:text-9xl font-black font-heading leading-tight mb-6 md:mb-8 uppercase">
                             EXPLORE THE <br />
                             <span className="text-gradient">FLEET</span>
                         </h1>
-                        <p className="text-muted text-xl leading-relaxed max-w-lg mb-12">
+                        <p className="text-muted text-base lg:text-xl leading-relaxed max-w-lg mb-8 md:mb-12">
                             {dict.fleet.description}
                         </p>
                     </div>

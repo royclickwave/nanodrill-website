@@ -13,7 +13,7 @@ export const TechnicalSection = ({ dict }: { dict: any }) => {
     ];
 
     return (
-        <section className="py-60 bg-[#030305] relative overflow-hidden">
+        <section className="py-20 md:py-40 lg:py-60 bg-[#030305] relative overflow-hidden">
             {/* Tech Blueprint Background */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:20px_20px]" />
@@ -21,7 +21,7 @@ export const TechnicalSection = ({ dict }: { dict: any }) => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -32,15 +32,15 @@ export const TechnicalSection = ({ dict }: { dict: any }) => {
                             <span className="h-px w-8 bg-primary" />
                             <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase block">{dict.technical.badge}</span>
                         </div>
-                        <h2 className="text-6xl md:text-[5.5rem] font-black font-heading leading-[0.85] mb-12 uppercase tracking-tighter">
+                        <h2 className="text-4xl sm:text-5xl md:text-[5.5rem] font-black font-heading leading-[0.85] mb-8 md:mb-12 uppercase tracking-tighter">
                             {dict.technical.title_main} <br />
                             <span className="text-primary italic">{dict.technical.title_sub}</span>
                         </h2>
-                        <p className="text-muted text-xl leading-relaxed mb-16 max-w-lg border-l-2 border-primary/20 pl-8">
+                        <p className="text-muted text-base lg:text-xl leading-relaxed mb-10 lg:mb-16 max-w-lg border-l-2 border-primary/20 pl-6 lg:pl-8">
                             {dict.technical.description}
                         </p>
 
-                        <div className="flex flex-col gap-10">
+                        <div className="flex flex-col gap-6 lg:gap-10">
                             {[
                                 dict.technical.check_1,
                                 dict.technical.check_2,
@@ -63,7 +63,7 @@ export const TechnicalSection = ({ dict }: { dict: any }) => {
                         </div>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+                    <div className="grid grid-cols-2 gap-4 md:gap-8 relative">
                         {/* Connecting technical lines */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none hidden md:block">
                             <svg className="w-full h-full stroke-white/5 fill-none">
@@ -79,16 +79,16 @@ export const TechnicalSection = ({ dict }: { dict: any }) => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                                className="glass-card p-12 rounded-[4rem] border-white/5 hover:border-primary/20 transition-all group relative overflow-hidden"
+                                className="glass-card p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl lg:rounded-[4rem] border-white/5 hover:border-primary/20 transition-all group relative overflow-hidden"
                             >
-                                <div className="absolute top-0 right-0 p-6 opacity-10 font-heading text-[6rem] leading-none pointer-events-none group-hover:opacity-20 transition-opacity">
+                                <div className="absolute top-0 right-0 p-4 lg:p-6 opacity-10 font-heading text-[3rem] lg:text-[6rem] leading-none pointer-events-none group-hover:opacity-20 transition-opacity">
                                     0{i + 1}
                                 </div>
-                                <div className="h-16 w-16 rounded-3xl bg-primary/10 flex items-center justify-center mb-10 group-hover:bg-primary transition-colors duration-500">
-                                    <util.icon className="text-primary group-hover:text-white transition-all duration-500" size={32} />
+                                <div className="h-12 w-12 lg:h-16 lg:w-16 rounded-2xl lg:rounded-3xl bg-primary/10 flex items-center justify-center mb-6 lg:mb-10 group-hover:bg-primary transition-colors duration-500">
+                                    <util.icon className="text-primary group-hover:text-white transition-all duration-500" size={24} />
                                 </div>
-                                <h3 className="text-xl font-heading mb-4 uppercase tracking-tighter">{util.title}</h3>
-                                <p className="text-muted text-xs leading-relaxed uppercase tracking-widest">{util.desc}</p>
+                                <h3 className="text-sm lg:text-xl font-heading mb-2 lg:mb-4 uppercase tracking-tighter">{util.title}</h3>
+                                <p className="text-muted text-[10px] lg:text-xs leading-relaxed uppercase tracking-wider lg:tracking-widest">{util.desc}</p>
                             </motion.div>
                         ))}
                     </div>

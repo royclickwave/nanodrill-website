@@ -108,7 +108,7 @@ export default function ModelDetailPage({
 
     return (
         <main className="min-h-screen bg-background">
-            <section className="pt-60 pb-20 relative overflow-hidden">
+            <section className="pt-32 md:pt-44 lg:pt-60 pb-12 md:pb-20 relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-[0.03] select-none">
                     <span className="text-[40vw] font-black font-heading leading-none uppercase">
                         {id.includes("tr") ? "5060" : id.split("-")[1]}
@@ -120,31 +120,31 @@ export default function ModelDetailPage({
                         <ArrowLeft size={14} className="group-hover:-translate-x-2 transition-transform" /> Back to fleet
                     </Link>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
                             <span className="text-white/40 font-heading text-[10px] uppercase tracking-[0.5em] block mb-4">Industrial Grade Gen-IV</span>
-                            <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-black font-heading leading-[0.85] mb-8 uppercase">
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-[7.5rem] font-black font-heading leading-[0.85] mb-6 md:mb-8 uppercase">
                                 {model.name.split(" ")[0]} <br />
                                 <span className="text-primary italic">{model.name.split(" ")[1]}</span>
                             </h1>
-                            <p className="text-muted text-xl max-w-lg leading-relaxed mb-12">
+                            <p className="text-muted text-base lg:text-xl max-w-lg leading-relaxed mb-8 md:mb-12">
                                 {model.description}
                             </p>
 
-                            <div className="flex flex-wrap gap-6">
+                            <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6">
                                 <button
                                     onClick={() => triggerLeadModal("download")}
-                                    className="h-20 px-10 bg-white text-black font-heading text-[10px] tracking-widest rounded-full hover:bg-primary hover:text-white transition-all flex items-center gap-4 uppercase"
+                                    className="h-14 sm:h-16 lg:h-20 px-6 sm:px-8 lg:px-10 bg-white text-black font-heading text-[10px] tracking-widest rounded-full hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-4 uppercase"
                                 >
                                     DOWNLOAD DATASHEET <Download size={16} />
                                 </button>
                                 <button
                                     onClick={() => triggerLeadModal("quote")}
-                                    className="h-20 px-10 border border-white/20 text-white font-heading text-[10px] tracking-widest rounded-full hover:bg-white hover:text-black transition-all uppercase"
+                                    className="h-14 sm:h-16 lg:h-20 px-6 sm:px-8 lg:px-10 border border-white/20 text-white font-heading text-[10px] tracking-widest rounded-full hover:bg-white hover:text-black transition-all uppercase"
                                 >
                                     GET A QUOTE
                                 </button>
@@ -155,7 +155,7 @@ export default function ModelDetailPage({
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
-                            className="relative h-[600px] w-full"
+                            className="relative h-[300px] md:h-[450px] lg:h-[600px] w-full"
                         >
                             <div className="absolute inset-0 bg-primary/10 rounded-full blur-[150px] -z-10" />
                             <Image
@@ -170,14 +170,14 @@ export default function ModelDetailPage({
                 </div>
             </section>
 
-            <section className="py-40 bg-[#060608]">
+            <section className="py-20 md:py-32 lg:py-40 bg-[#060608]">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
                         <div>
-                            <h2 className="text-4xl font-black font-heading mb-12 uppercase tracking-tight">Technical <br /> <span className="text-primary">Specifications</span></h2>
+                            <h2 className="text-3xl md:text-4xl font-black font-heading mb-8 md:mb-12 uppercase tracking-tight">Technical <br /> <span className="text-primary">Specifications</span></h2>
                             <div className="grid grid-cols-1 gap-4">
                                 {Object.entries(model.specs).map(([key, value]) => (
-                                    <div key={key} className="flex justify-between items-center py-6 border-b border-white/5 group hover:border-primary/30 transition-colors">
+                                    <div key={key} className="flex justify-between items-center py-4 md:py-6 border-b border-white/5 group hover:border-primary/30 transition-colors gap-4">
                                         <span className="text-muted font-heading text-[10px] uppercase tracking-widest">{key as string}</span>
                                         <span className="text-white font-bold">{value as string}</span>
                                     </div>
@@ -186,10 +186,10 @@ export default function ModelDetailPage({
                         </div>
 
                         <div>
-                            <h2 className="text-4xl font-black font-heading mb-12 uppercase tracking-tight">Key <br /> <span className="text-primary">Features</span></h2>
+                            <h2 className="text-3xl md:text-4xl font-black font-heading mb-8 md:mb-12 uppercase tracking-tight">Key <br /> <span className="text-primary">Features</span></h2>
                             <div className="grid grid-cols-1 gap-6">
                                 {model.features.map((feature: string, idx: number) => (
-                                    <div key={idx} className="glass-card p-8 rounded-3xl border-white/5 flex items-start gap-6 group hover:border-primary/20 transition-all">
+                                    <div key={idx} className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border-white/5 flex items-start gap-4 md:gap-6 group hover:border-primary/20 transition-all">
                                         <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
                                             <CheckCircle size={18} className="text-primary group-hover:text-white" />
                                         </div>

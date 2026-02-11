@@ -18,12 +18,12 @@ export default async function ContactPage({
 
     return (
         <main className="min-h-screen bg-background">
-            <section className="pt-60 pb-32">
+            <section className="pt-32 md:pt-44 lg:pt-60 pb-16 md:pb-24 lg:pb-32">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row gap-20">
+                    <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
                         <div className="lg:w-1/2">
-                            <h1 className="text-6xl md:text-8xl font-black font-heading mb-8 uppercase">Let&apos;s <span className="text-primary italic">Connect</span></h1>
-                            <p className="text-muted text-xl mb-12 max-w-lg leading-relaxed">
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading mb-6 md:mb-8 uppercase">Let&apos;s <span className="text-primary italic">Connect</span></h1>
+                            <p className="text-muted text-base lg:text-xl mb-8 md:mb-12 max-w-lg leading-relaxed">
                                 Have questions about our models or need a technical consultation? Our experts are ready to assist you worldwide.
                             </p>
 
@@ -61,22 +61,22 @@ export default async function ContactPage({
                         </div>
 
                         <div className="lg:w-1/2">
-                            <div className="glass-card p-10 rounded-[40px] border-white/5 relative overflow-hidden">
+                            <div className="glass-card p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl lg:rounded-[40px] border-white/5 relative overflow-hidden">
                                 <form className="relative z-10 flex flex-col gap-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="flex flex-col gap-2">
                                             <label className="text-xs text-muted uppercase tracking-widest pl-2 font-heading">Full Name</label>
-                                            <input type="text" className="bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" />
+                                            <input type="text" className="bg-white/5 border border-white/10 rounded-2xl p-4 text-base text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" />
                                         </div>
                                         <div className="flex flex-col gap-2">
                                             <label className="text-xs text-muted uppercase tracking-widest pl-2 font-heading">Email Address</label>
-                                            <input type="email" className="bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" />
+                                            <input type="email" className="bg-white/5 border border-white/10 rounded-2xl p-4 text-base text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" />
                                         </div>
                                     </div>
 
                                     <div className="flex flex-col gap-2">
                                         <label className="text-xs text-muted uppercase tracking-widest pl-2 font-heading">Subject</label>
-                                        <select className="bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none outline-none">
+                                        <select className="bg-white/5 border border-white/10 rounded-2xl p-4 text-base text-white focus:outline-none focus:border-primary transition-colors appearance-none outline-none">
                                             <option className="bg-background" value="General Inquiry">General Inquiry</option>
                                             <option className="bg-background" value="Quote Request">Quote Request</option>
                                             <option className="bg-background" value="Technical Support">Technical Support</option>
@@ -86,7 +86,7 @@ export default async function ContactPage({
 
                                     <div className="flex flex-col gap-2">
                                         <label className="text-xs text-muted uppercase tracking-widest pl-2 font-heading">Message</label>
-                                        <textarea rows={5} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-primary transition-colors" placeholder="How can we help you?"></textarea>
+                                        <textarea rows={5} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-base text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="How can we help you?"></textarea>
                                     </div>
 
                                     <Button size="lg" className="w-full mt-2 font-heading tracking-widest h-16">SEND MESSAGE</Button>

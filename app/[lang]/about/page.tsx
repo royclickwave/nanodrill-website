@@ -19,23 +19,23 @@ export default async function AboutPage({
 
     return (
         <main className="min-h-screen bg-background">
-            <section className="pt-60 pb-32 relative overflow-hidden">
+            <section className="pt-32 md:pt-44 lg:pt-60 pb-16 md:pb-24 lg:pb-32 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <div>
                             <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">{dict.about.badge}</span>
-                            <h1 className="text-6xl md:text-8xl font-black font-heading leading-tight mb-10 uppercase">
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading leading-tight mb-6 md:mb-10 uppercase">
                                 {dict.about.title_main} <br />
                                 <span className="text-gradient">{dict.about.title_sub}</span> <br />
                                 {dict.about.title_end}
                             </h1>
-                            <p className="text-muted text-xl leading-relaxed mb-12">
+                            <p className="text-muted text-base lg:text-xl leading-relaxed mb-8 md:mb-12">
                                 {dict.about.description}
                             </p>
 
-                            <div className="grid grid-cols-2 gap-10">
+                            <div className="grid grid-cols-2 gap-6 md:gap-10">
                                 <div>
                                     <p className="text-4xl font-black text-white mb-2">{dict.about.stats_num}</p>
                                     <p className="text-xs text-muted font-heading uppercase tracking-widest whitespace-pre-line">{dict.about.stats_text}</p>
@@ -47,7 +47,7 @@ export default async function AboutPage({
                             </div>
                         </div>
 
-                        <div className="relative h-[600px] rounded-[4rem] overflow-hidden border border-white/5 shadow-2xl">
+                        <div className="relative h-[300px] md:h-[450px] lg:h-[600px] rounded-2xl md:rounded-[3rem] lg:rounded-[4rem] overflow-hidden border border-white/5 shadow-2xl">
                             <Image
                                 src="/images/about-image.png"
                                 alt="Nanodrill Workshop"
@@ -59,7 +59,7 @@ export default async function AboutPage({
                 </div>
             </section>
 
-            <section className="py-40 bg-[#060608]">
+            <section className="py-20 md:py-32 lg:py-40 bg-[#060608]">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {[
@@ -67,7 +67,7 @@ export default async function AboutPage({
                             { icon: Globe, title: "Global Reach", desc: "Our machines operate in over 20 countries, from tight European cities to rocky terrains." },
                             { icon: Users, title: "Partner-Led", desc: "We work closely with contractors to ensure our machines solve real-world site problems." }
                         ].map((item, i) => (
-                            <div key={i} className="glass-card p-12 rounded-[3rem] border-white/5">
+                            <div key={i} className="glass-card p-8 lg:p-12 rounded-2xl md:rounded-[2rem] lg:rounded-[3rem] border-white/5">
                                 <item.icon className="text-primary mb-8" size={40} />
                                 <h3 className="text-2xl font-heading mb-4 uppercase">{item.title}</h3>
                                 <p className="text-muted leading-relaxed">{item.desc}</p>

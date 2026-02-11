@@ -36,39 +36,39 @@ export default async function ToolingPage({
 
     return (
         <main className="min-h-screen bg-background">
-            <section className="pt-60 pb-20 relative overflow-hidden">
+            <section className="pt-32 md:pt-44 lg:pt-60 pb-12 md:pb-20 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <div>
-                            <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-8 block">Project Accessories</span>
-                            <h1 className="text-6xl md:text-8xl font-black font-heading leading-tight mb-8 uppercase">
+                            <span className="text-primary font-heading tracking-[0.5em] text-[10px] uppercase mb-6 md:mb-8 block">Project Accessories</span>
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black font-heading leading-tight mb-6 md:mb-8 uppercase">
                                 PRECISION <br />
                                 <span className="text-gradient">TOOLING</span>
                             </h1>
-                            <p className="text-muted text-xl leading-relaxed max-w-lg mb-12">
+                            <p className="text-muted text-base lg:text-xl leading-relaxed max-w-lg mb-8 md:mb-12">
                                 Every component is engineered to complement the unique performance profile of Nanodrill machines. Built for durability, accuracy, and speed.
                             </p>
                         </div>
 
-                        <div className="relative h-[500px] w-full glass-card rounded-[4rem] border-white/5 overflow-hidden">
+                        <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full glass-card rounded-2xl md:rounded-[3rem] lg:rounded-[4rem] border-white/5 overflow-hidden">
                             <Image
                                 src="/images/tooling.png"
                                 alt="Nanodrill Tooling"
                                 fill
-                                className="object-contain p-12"
+                                className="object-contain p-6 md:p-12"
                             />
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="py-40 bg-[#060608]">
+            <section className="py-20 md:py-32 lg:py-40 bg-[#060608]">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
                         {toolingCategories.map((cat, i) => (
-                            <div key={i} className="glass-card p-12 rounded-[3rem] border-white/5 hover:border-primary/20 transition-all flex flex-col group">
+                            <div key={i} className="glass-card p-8 lg:p-12 rounded-2xl md:rounded-[2rem] lg:rounded-[3rem] border-white/5 hover:border-primary/20 transition-all flex flex-col group">
                                 <div className="h-14 w-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 border border-primary/20 group-hover:bg-primary transition-colors">
                                     <Drill className="text-primary group-hover:text-white" size={24} />
                                 </div>
