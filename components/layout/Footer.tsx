@@ -79,7 +79,7 @@ export const Footer = () => {
 
                 <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 gap-4">
                     <p className="text-muted text-sm">
-                        © {new Date().getFullYear()} Kormee Machinery B.V. - All rights reserved.
+                        © {new Date().getFullYear()} Kormee Machinery B.V. - Realized by <a href="https://clickwave.nl?utm_source=nanodrill&utm_medium=referral&utm_campaign=footer_credit" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-white transition-colors font-bold">clickwave</a>
                     </p>
                     <div className="flex gap-6">
                         <Link href="/terms" className="text-xs text-muted/60 hover:text-white">Terms & Conditions</Link>
