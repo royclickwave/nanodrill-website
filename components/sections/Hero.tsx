@@ -60,17 +60,16 @@ export const Hero = ({ dict }: { dict: any }) => {
                     </motion.div>
 
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="flex flex-col sm:flex-row gap-8 mt-4">
-                        <Button size="lg" className="h-20 px-12 text-[10px] tracking-[0.3em] font-heading overflow-hidden group/btn relative bg-white text-black border-none hover:text-white" onClick={() => triggerLeadModal("quote")}>
-                            <span className="relative z-10 flex items-center gap-3">{dict.hero.cta_primary} <ArrowRight size={16} /></span>
-                            <div className="absolute inset-0 bg-primary translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-soft" />
+                        <Button size="lg" className="h-20 px-12 text-[10px] tracking-[0.4em] font-heading bg-primary text-white border-none shadow-[0_20px_40px_rgba(214,0,28,0.3)] hover:shadow-[0_25px_50px_rgba(214,0,28,0.5)] transition-all hover:-translate-y-1" onClick={() => triggerLeadModal("quote")}>
+                            {dict.hero.cta_primary} <ArrowRight size={16} className="ml-2" />
                         </Button>
-                        <button className="flex items-center gap-6 group text-white hover:text-primary transition-all">
+                        <button className="flex items-center gap-6 group text-white hover:text-primary transition-all ml-4" onClick={() => triggerLeadModal("quote")}>
                             <div className="h-16 w-16 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary/10 group-hover:border-primary/50 transition-all shadow-[0_0_20px_rgba(214,0,28,0)] group-hover:shadow-[0_0_40px_rgba(214,0,28,0.2)] relative overflow-hidden">
                                 <Play fill="currentColor" size={20} className="translate-x-0.5 relative z-10" />
                             </div>
-                            <div className="flex flex-col">
-                                <span className="font-heading tracking-[0.3em] text-[10px] uppercase opacity-40">{dict.hero.cta_secondary}</span>
-                                <span className="font-heading tracking-[0.1em] text-xs uppercase">WATCH GEN-IV FILM</span>
+                            <div className="flex flex-col items-start translate-y-1">
+                                <span className="font-heading tracking-[0.3em] text-[10px] uppercase opacity-40 leading-none mb-1">{dict.hero.cta_secondary}</span>
+                                <div className="h-px w-0 group-hover:w-full bg-primary transition-all duration-500" />
                             </div>
                         </button>
                     </motion.div>

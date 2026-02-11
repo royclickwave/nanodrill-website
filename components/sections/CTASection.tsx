@@ -34,11 +34,10 @@ export const CTASection = ({ dict }: { dict: any }) => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-8 justify-center mt-20">
-                        <Button size="lg" className="h-24 px-16 text-[10px] tracking-[0.4em] font-heading uppercase group overflow-hidden relative" onClick={() => triggerLeadModal("quote")}>
-                            <span className="relative z-10">{dict.cta.primary_btn}</span>
-                            <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                        <Button size="lg" className="h-24 px-16 text-[10px] tracking-[0.4em] font-heading uppercase bg-primary text-white border-none shadow-[0_20px_50px_rgba(214,0,28,0.4)] hover:shadow-[0_25px_60px_rgba(214,0,28,0.6)] transition-all hover:-translate-y-2" onClick={() => triggerLeadModal("quote")}>
+                            {dict.cta.primary_btn}
                         </Button>
-                        <button className="h-24 px-16 border border-white/10 rounded-full text-[10px] tracking-[0.4em] font-heading uppercase hover:bg-white hover:text-black transition-all duration-500" onClick={() => triggerLeadModal("quote")}>
+                        <button className="h-24 px-16 border border-white/10 rounded-full text-[10px] tracking-[0.4em] font-heading uppercase bg-white/5 hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-sm" onClick={() => triggerLeadModal("quote")}>
                             {dict.cta.secondary_btn}
                         </button>
                     </div>
